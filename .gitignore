@@ -1,0 +1,35 @@
+# Python bytecode aur cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+CACHEDIR.TAG
+
+# Virtual environments
+venv/
+venv39/
+env/
+
+# Logs
+logs/
+*.log
+
+# Test Reports aur dumps
+reports/*.html
+reports/assets/
+reports/failed_data/
+
+# Temporary / accidental folders
+1/
+v/
+.DS_Store
+Thumbs.db
+.idea/
+
+# Temporary Office/Excel lock files
+~$*.xlsx
+~$*.xls
+
+# Environment files
+.env
+config/package.json
