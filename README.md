@@ -69,14 +69,14 @@ The `test_data/etl_metadata.xlsx` file acts as the **test inventory** for the fr
 | `test_id`          | Unique test case ID                                                                           |
 | `active`           | Indicates whether the test case is active (`Y/N`)                                             |
 | `test_description` | Business-readable description of the validation                                               |
-| `validation_type`  | Type of validation: `COUNT`, `NULL_CHECK`, `DUPLICATE_CHECK`, `BUSINESS_RULE`, or `DATA_DIFF` |
+| `validation_type`  | Type of validation: `COUNT`, `NULL_CHECK`, `DUPLICATE_CHECK`, `BUSINESS_RULE` or `DATA_DIFF` |
 | `query_key`        | Key used to identify the SQL query for scalar validations                                     |
 | `source_query_key` | SQL query key used to retrieve source data for `DATA_DIFF` validation                         |
 | `target_query_key` | SQL query key used to retrieve target data for `DATA_DIFF` validation                         |
 | `key_column`       | Primary/business key used for data comparison or duplicate validation                         |
 | `expected_value`   | Expected validation result, normally `0` for defect checks                                    |
 | `severity`         | Severity level used for reporting and defect triage                                           |
-| `layer`            | Data layer being validated: `LANDING`, `STAGING`, `DWH`, or `SOURCE_TO_TARGET`                |
+| `layer`            | Data layer being validated: `LANDING`, `STAGING`, `DWH` or `SOURCE_TO_TARGET`                |
 
 ## Snowflake Configuration
 
@@ -89,7 +89,6 @@ SNOWFLAKE_ACCOUNT
 SNOWFLAKE_WAREHOUSE
 SNOWFLAKE_DATABASE
 SNOWFLAKE_SCHEMA
-SNOWFLAKE_ROLE       # Optional
 ```
 
 This approach helps keep sensitive credentials outside the source code and makes the framework easier to configure across different environments.
@@ -104,7 +103,7 @@ Excel    = Test Inventory
 SQL      = Validation Logic
 ```
 
-Therefore, when a source/target table, validation condition, or business rule changes, the **Python framework code should normally remain unchanged**.
+Therefore, when a source/target table, validation condition or business rule changes, the **Python framework code should normally remain unchanged**.
 
 This makes the framework easier to maintain, scale and reuse across multiple ETL test scenarios.
 
