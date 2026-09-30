@@ -103,7 +103,7 @@ Excel    = Test Inventory
 SQL      = Validation Logic
 ```
 
-Therefore, when a source/target table, validation condition or business rule changes, the **Python framework code should normally remain unchanged**.
+Therefore, when a source/target table, validation condition or business rule changes the **Python framework code should normally remain unchanged**.
 
 This makes the framework easier to maintain, scale and reuse across multiple ETL test scenarios.
 
