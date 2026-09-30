@@ -1,6 +1,6 @@
 # Data-Driven ETL Automation Framework – Snowflake
 
-This framework is designed for an ETL testing setup where **source data, transformations, and the DWH target are all hosted in Snowflake**.
+This framework is designed for an ETL testing setup where **source data, transformations and the DWH target are all hosted in Snowflake**.
 
 The framework is built using **Python and PyTest** and follows a data-driven approach. In most cases, adding a new ETL test case requires updating only the `test_data/etl_metadata.xlsx` file and the `SQL/etl_queries.sql` file. No new Python test method is normally required.
 
@@ -106,7 +106,7 @@ SQL      = Validation Logic
 
 Therefore, when a source/target table, validation condition, or business rule changes, the **Python framework code should normally remain unchanged**.
 
-This makes the framework easier to maintain, scale, and reuse across multiple ETL test scenarios.
+This makes the framework easier to maintain, scale and reuse across multiple ETL test scenarios.
 
 ## Validation Types
 
@@ -271,7 +271,7 @@ ETL-Automation-Framework/
 * Makes test cases configuration-driven
 * Simplifies maintenance
 * Enables scalable ETL test automation
-* Separates test data, SQL logic, and framework code
+* Separates test data, SQL logic and framework code
 * Supports CI/CD execution through Jenkins
 * Provides detailed test reports and failure records
 
